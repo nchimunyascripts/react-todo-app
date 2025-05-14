@@ -10,8 +10,12 @@ ReactDOM.createRoot(document.getElementById("root")!).render(
     <KindeProvider
       clientId="51eebc7a22194be285935c0f1eae0a48"
       domain="https://backlogcode.kinde.com"
-      redirectUri="http://localhost:5173"
-      logoutUri="http://localhost:5173"
+      redirectUri={
+        process.env.NODE_ENV === "production" ? "" : "http://localhost:5173"
+      }
+      logoutUri={
+        process.env.NODE_ENV === "production" ? "" : "http://localhost:5173"
+      }
     >
       <TodosContextProvider>
         <App />
