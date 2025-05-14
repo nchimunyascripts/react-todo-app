@@ -2,7 +2,7 @@
 
 ![Todo App Screenshot](./public/Screenshot.png)
 
-A modern Todo application built with React, TypeScript, and Tailwind CSS, featuring authentication via Kinde and state management with Context API.
+A modern Todo application built with React, TypeScript, and Tailwind CSS, featuring authentication via Kinde and state management with Context API [Live Demo](https://react-todo-app-seven-iota.vercel.app/).
 
 ## Features
 

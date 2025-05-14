@@ -11,10 +11,14 @@ ReactDOM.createRoot(document.getElementById("root")!).render(
       clientId="51eebc7a22194be285935c0f1eae0a48"
       domain="https://backlogcode.kinde.com"
       redirectUri={
-        process.env.NODE_ENV === "production" ? "" : "http://localhost:5173"
+        process.env.NODE_ENV === "production"
+          ? "https://react-todo-app-seven-iota.vercel.app/"
+          : "http://localhost:5173"
       }
       logoutUri={
-        process.env.NODE_ENV === "production" ? "" : "http://localhost:5173"
+        process.env.NODE_ENV === "production"
+          ? "https://react-todo-app-seven-iota.vercel.app/"
+          : "http://localhost:5173"
       }
     >
       <TodosContextProvider>
