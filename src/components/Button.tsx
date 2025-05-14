@@ -3,7 +3,7 @@ import { ReactNode } from "react";
 type ButtonProps = {
   buttonType?: "primary" | "secondary";
   children: ReactNode;
-  onClick: () => Promise<void>;
+  onClick?: () => Promise<void>;
 };
 
 const Button = ({ onClick, buttonType, children }: ButtonProps) => {

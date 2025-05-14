@@ -3,7 +3,8 @@ import AddTodoForm from "./AddTodoForm";
 import Button from "./Button";
 
 const Sidebar = () => {
-  const { login, register, isAuthenticated, logout, user } = useKindeAuth();
+  const { login, register, isAuthenticated, logout, user, isLoading } =
+    useKindeAuth();
   return (
     <section
       className="flex flex-col col-[2/3] row-[2/3] bg-[#fffcf9] border-l 
@@ -11,7 +12,7 @@ const Sidebar = () => {
     >
       <AddTodoForm />
       <div className="mt-auto space-y-2">
-        {isAuthenticated ? (
+        {isLoading ? null : isAuthenticated ? (
           <>
             <p className="text-sm">Logged in as {user?.email}</p>
             <Button buttonType="secondary" onClick={logout}>
